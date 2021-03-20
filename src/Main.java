@@ -25,7 +25,6 @@ public class Main {
         List<channel> channels = new ArrayList<>();
 
         point p1 = info.createPoint();
-        System.out.println(p1);
         channel c1 = p1.createChannel();
         p1.execute("Algo");
         c1.write("GEEKS FOR GEEKS");
