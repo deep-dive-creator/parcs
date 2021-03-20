@@ -4,10 +4,9 @@ import java.util.regex.Pattern;
 import parcs.*;
 
 public class Algo implements AM{
-
-    public final static int d = 256;
-
     public void run(AMInfo info) {
+
+        int d = 256;
 
         String txt = (String) info.parent.readObject();
         String pat = (String) info.parent.readObject();
