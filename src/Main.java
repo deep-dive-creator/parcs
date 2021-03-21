@@ -30,7 +30,7 @@ public class Main {
 
         point p2 = info.createPoint();
         channel c2 = p2.createChannel();
-        p2.execute("Algo");
+        p2.execute("MarchingParallel");
         c2.write("GEEKS FOR GEKS");
         c2.write("GEEK");
         c2.write(101);
