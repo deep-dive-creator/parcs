@@ -11,7 +11,7 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
         task curtask = new task();
-        curtask.addJarFile("Algo.jar");
+        curtask.addJarFile("MarchingParallel.jar");
 
         AMInfo info = new AMInfo(curtask, null);
 
@@ -22,7 +22,7 @@ public class Main {
 
         point p1 = info.createPoint();
         channel c1 = p1.createChannel();
-        p1.execute("Algo");
+        p1.execute("MarchingParallel");
         c1.write("GEEKS FOR GEEKS");
         c1.write("GEEK");
         c1.write(101);
