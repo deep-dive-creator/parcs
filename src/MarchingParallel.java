@@ -1,11 +1,9 @@
-import java.util.Arrays;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-import parcs.*;
+import parcs.AM;
+import parcs.AMInfo;
 
-public class Algo implements AM{
+public class MarchingParallel implements AM {
+    @Override
     public void run(AMInfo info) {
-
         int d = 256;
 
         String txt = (String) info.parent.readObject();
@@ -63,6 +61,5 @@ public class Algo implements AM{
         }
 
         info.parent.write(String.valueOf(kk));
-
     }
 }

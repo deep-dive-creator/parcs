@@ -1,17 +1,13 @@
+import parcs.AMInfo;
+import parcs.channel;
+import parcs.point;
+import parcs.task;
 
-import java.io.*;
-import parcs.*;
-
-
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.List;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
-
 
     public static void main(String[] args) throws IOException {
         task curtask = new task();
@@ -58,4 +54,5 @@ public class Main {
 
         curtask.end();
     }
+
 }

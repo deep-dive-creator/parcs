@@ -1,19 +1,19 @@
 all: run
 
 clean:
-	rm -f out/Main.jar out/Algo.jar
+	rm -f out/Main.jar out/MarchingParallel.jar
 
-out/Main.jar: out/parcs.jar src/Main.java
-	@javac -cp out/parcs.jar src/Main.java
-	@jar cf out/Main.jar -C src Main.class
-	@rm -f src/Main.class
+out/Main.jar: out/parcs.jar src/Main.java src/MarchingParallel.java src/Marching.java
+	@javac -cp out/parcs.jar src/Main.java src/MarchingParallel.java src/Marching.java
+	@jar cf out/Main.jar -C src Main.class -C src MarchingParallel.class -C src Marching.class
+	@rm -f src/Main.class src/MarchingParallel.class src/Marching.class
 
-out/Algo.jar: out/parcs.jar src/Algo.java
-	@javac -cp out/parcs.jar src/Algo.java
-	@jar cf out/Algo.jar -C src Algo.class
-	@rm -f src/Algo.class
+out/MarchingParallel.jar: out/parcs.jar src/MarchingParallel.java src/Marching.java
+	@javac -cp out/parcs.jar src/MarchingParallel.java src/Marching.java
+	@jar cf out/MarchingParallel.jar -C src MarchingParallel.class -C src Marching.class
+	@rm -f src/MarchingParallel.class src/Marching.class
 
-build: out/Main.jar out/Algo.jar
+build: out/Main.jar out/MarchingParallel.jar
 
-run: out/Main.jar
+run: out/Main.jar out/MarchingParallel.jar
 	@cd out && java -cp 'parcs.jar:Main.jar' Main
