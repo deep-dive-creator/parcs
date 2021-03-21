@@ -10,6 +10,8 @@ public class MarchingParallel implements AM {
         String pat = (String) info.parent.readObject();
         Integer q = (Integer) info.parent.readObject();
 
+        System.out.println(q)
+
         int M = pat.length();
         int N = txt.length();
         int i, j;
