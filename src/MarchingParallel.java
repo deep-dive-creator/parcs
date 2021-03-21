@@ -6,7 +6,7 @@ public class MarchingParallel implements AM {
     public void run(AMInfo info) {
         int d = 256;
 
-        String txt = (String) info.parent.readString();
+        String txt = (String) info.parent.readObject();
         String pat = (String) info.parent.readString();
         Integer q = (Integer) info.parent.readInt();
 
