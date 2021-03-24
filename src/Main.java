@@ -43,7 +43,7 @@ public class Main {
         point p2 = info.createPoint();
         channel c2 = p2.createChannel();
         p2.execute("MarchingParallel");
-        c2.write(result[0]);
+        c2.write(result[1]);
         c2.write("abc");
         c2.write(101);
         channels.add(c2);
