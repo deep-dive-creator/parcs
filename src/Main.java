@@ -15,7 +15,7 @@ public class Main {
     public static void main(String[] args) throws FileNotFoundException {
         File myObj = new File("input.txt");
         Scanner myReader = new Scanner(myObj);
-        String[] result;
+        String[] result = new String[2];
         while (myReader.hasNextLine()) {
             String data = myReader.nextLine();
             result = data.split("--");
