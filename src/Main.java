@@ -10,6 +10,15 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) throws IOException {
+        File myObj = new File("input.txt");
+        Scanner myReader = new Scanner(myObj);
+        String[] result;
+        while (myReader.hasNextLine()) {
+            String data = myReader.nextLine();
+            result = data.split("--");
+        }
+
+
         task curtask = new task();
         curtask.addJarFile("MarchingParallel.jar");
 
@@ -23,16 +32,16 @@ public class Main {
         point p1 = info.createPoint();
         channel c1 = p1.createChannel();
         p1.execute("MarchingParallel");
-        c1.write("GEEKS FOR GEEKS");
-        c1.write("GEEK");
+        c1.write(result[0]);
+        c1.write("abc");
         c1.write(101);
         channels.add(c1);
 
         point p2 = info.createPoint();
         channel c2 = p2.createChannel();
         p2.execute("MarchingParallel");
-        c2.write("GEEKS FOR GEKS");
-        c2.write("GEEK");
+        c2.write(result[0]);
+        c2.write("abc");
         c2.write(101);
         channels.add(c2);
 
