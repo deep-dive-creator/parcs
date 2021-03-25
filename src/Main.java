@@ -36,7 +36,7 @@ public class Main {
         channel c1 = p1.createChannel();
         p1.execute("MarchingParallel");
         c1.write(result[0]);
-        c1.write("abc");
+        c1.write("abc vm");
         c1.write(101);
         channels.add(c1);
 
@@ -44,7 +44,7 @@ public class Main {
         channel c2 = p2.createChannel();
         p2.execute("MarchingParallel");
         c2.write(result[1]);
-        c2.write("abc");
+        c2.write("abc vm");
         c2.write(101);
         channels.add(c2);
 
